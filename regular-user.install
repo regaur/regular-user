@@ -1,0 +1,14 @@
+pre_install () {
+  id -u regular || useradd -m regular
+  gpasswd -a regular wheel
+  # lock password (use ssh pub key to login)
+  passwd -l regular
+}
+
+post_install () {
+  chown -R regular:regular ~regular
+}
+
+post_remove () {
+  id -u regular && userdel --remove regular
+}
