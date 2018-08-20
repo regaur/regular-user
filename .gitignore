@@ -1,5 +1,5 @@
 pkg/
-regular-user-*-any.pkg.tar.xz
-regular-user-*-any.pkg.tar.xz.sig
 src/
+*.pkg.tar.xz
+*.pkg.tar.xz.sig
 
